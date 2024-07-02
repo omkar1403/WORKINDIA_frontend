@@ -48,7 +48,7 @@ const AddItem = ({ onAdd }) => {
 const Explore = () => {
   const initialItems = [
     { id: 1, name: 'Item 1', price: 100.0, shipping: 'Same Day Shipping' },
-    { id: 2, name: 'Item 2', price: 110.0 },
+    { id: 2, name: 'Item', price: 110.0 },
     { id: 3, name: 'Item 3', price: 130.0 },
     { id: 4, name: 'Item 4', price: 230.0 },
     { id: 5, name: 'Item 5', price: 230.0 },
@@ -70,8 +70,8 @@ const Explore = () => {
   };
 
   return (
-    <div className="explore-container">
-      <header className="explore-header">
+    <div className="explore1">
+      <header className="explore2">
         <h1>Explore</h1>
         <button className="filter-button" onClick={() => setShowAddItem(!showAddItem)}>
           {showAddItem ? 'Close' : 'Add'}
@@ -79,7 +79,7 @@ const Explore = () => {
       </header>
       <input
         type="text"
-        className="search-input"
+        className="search1"
         placeholder="Search"
         value={searchTerm}
         onChange={e => setSearchTerm(e.target.value)}
@@ -88,12 +88,12 @@ const Explore = () => {
       <ul className="items-list">
         {filteredItems.map(item => (
           <li key={item.id} className="item">
-            <div className="item-details">
+            <div className="item1">
               <h2>{item.name}</h2>
               <p>MRP: ₹{item.price.toFixed(1)}</p>
             </div>
             {item.shipping && (
-              <span className="shipping-info">{item.shipping}</span>
+              <span className="shipping1">{item.shipping}</span>
             )}
           </li>
         ))}
